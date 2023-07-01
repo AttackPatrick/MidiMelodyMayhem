@@ -1,11 +1,47 @@
 <!DOCTYPE html>
     <html lang="en">
         <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document Title</title>
-    </head>
-    <body>
-        <!-- Content of the webpage goes here -->
-    </body>
+            <title>MIDI Melody Mayhem</title>
+            <link rel="stylesheet" type="text/css" href="styles.css">
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document Title</title>
+        </head>
+        <body>
+            <div id="username-container">               <!-- Enter Username -->
+                <h2>Enter your username:</h2>
+                <input type="text" id="username-input">
+                <button id="start-button">Start Game</button>
+              </div>
+
+            <div id="question-container">
+                <h1 id="question-text">Question:</h1>   <!-- Where the questions are asked -->
+                <ul id="choices-list">                  <!-- Where the questions are answered -->
+                  <li class="choice">Option 1</li> 
+                  <li class="choice">Option 2</li>
+                  <li class="choice">Option 3</li>
+                  <li class="choice">Option 4</li>
+                </ul>
+            </div>
+            
+            <div id="score-container">                  <!-- current score -->
+                <p id="score-text">Score: <span id="score">0</span></p>
+            </div>
+
+            <div id="high-score-container">             <!-- High Score -->
+                <h2>High Score</h2>
+                <p id="high-score">0</p>
+            </div>
+            
+            <div id="leaderboard-container">            <!-- top 3 High score usernames -->
+                <h2>Leaderboard</h2>
+                <ol id="leaderboard">
+                  <li><span class="leaderboard-name">Player 1</span> - <span class="leaderboard-score">0</span></li>
+                  <li><span class="leaderboard-name">Player 2</span> - <span class="leaderboard-score">0</span></li>
+                  <li><span class="leaderboard-name">Player 3</span> - <span class="leaderboard-score">0</span></li>
+                </ol>
+            </div>
+            
+              <script src="script.js"></script>
+        </body>
 </html>
