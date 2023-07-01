@@ -1,0 +1,132 @@
+/* Colour Scheme
+Dark Green 091E05
+Cal Ploy Green 004F2D
+Thulian Pink D87cac
+Pink F9B9C3
+School Bus Yellow FFDA22
+*/
+
+/* Font Families
+font-family: 'Josefin Slab', serif;
+font-family: 'Prompt', sans-serif;
+font-family: 'Quattrocento Sans', sans-serif;
+*/
+
+/* Global Styles */
+body {
+    font-family: 'Josefin Slab', serif;
+    background-color: #D87CAC;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    font-family: 'Prompt', sans-serif;
+    margin-top: 0;
+}
+
+ul {
+    font-family: 'Quattrocento Sans', sans-serif;
+    list-style-type: none;
+    padding: 0;
+  }
+
+/* Container Styles */
+
+#username-container {
+    text-align: center;
+    margin-top: 100px;
+}
+
+#question-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    text-align: center;
+  }
+
+  .question-box {
+    background-color: #FFDA22;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+#score-container {
+    text-align: center;
+}
+
+#high-score-container, #leaderboard-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Form Styles*/
+
+#username-container input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+#username-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #091E05;
+    color: #FFDA22;
+    border: none;
+    cursor: pointer;
+}
+
+/* Leaderboard Styles */
+
+#leaderboard {
+    padding: 0;
+    text-align: left;
+  }
+  
+  #leaderboard li {
+    margin-bottom: 10px;
+  }
+  
+  .leaderboard-name {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  /* Additional Styling */
+  
+  #question-text {
+    font-size: 24px;
+  }
+  
+  #score-text {
+    font-size: 20px;
+  }
+  
+  #high-score {
+    font-size: 18px;
+  }
+  
+/* Styles for the welcome section */
+
+#welcome-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #D87CAC;
+  }
+  
+  #logo {
+    animation: logo-anim 4s linear infinite;
+  }
+  
+  @keyframes logo-anim {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  
+  
+  
