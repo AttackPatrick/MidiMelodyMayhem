@@ -18,7 +18,7 @@ body {
     background-color: #D87CAC;
     margin: 0;
     padding: 0;
-}
+} 
 
 h1, h2 {
     font-family: 'Prompt', sans-serif;
@@ -33,6 +33,15 @@ ul {
 
 /* Container Styles */
 
+#welcome-container {
+  position: absolute;
+  background-color: green;
+  height: 70vh;
+  width: 60vw;
+  top: 15vh;
+  left: 20vw;
+}
+
 #username-container {
     text-align: center;
     margin-top: 100px;
@@ -46,12 +55,26 @@ ul {
     text-align: center;
   }
 
-  .question-box {
+.question-box {
     background-color: #FFDA22;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
+
+#game-box {
+    background-color: #091E05;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.answer-box {
+    background-color: #FFDA22;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
 #score-container {
     text-align: center;
@@ -109,14 +132,6 @@ ul {
   }
   
 /* Styles for the welcome section */
-
-#welcome-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #D87CAC;
-  }
   
   #logo {
     animation: logo-anim 4s linear infinite;

@@ -2,7 +2,7 @@
     <html lang="en">
         <head>
             <title>MIDI Melody Mayhem</title>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" type="text/css" href="css/styles.css">
+            <link rel="stylesheet" type="text/css" href="style.css">
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@1,700&family=Prompt:wght@300&family=Quattrocento+Sans&display=swap" rel="stylesheet">
@@ -11,25 +11,27 @@
             <title>Document Title</title>
         </head>
         <body>
-            <div id="welcome-container">                <!-- Welcome section with animated logo -->
-                <i class="fa-regular fa-music fa-beat-fade"></i>
-                <audio id="intro-audio" src="intro.midi" autoplay></audio>
-            </div>
-
+            
             <div id="username-container">               <!-- Enter Username -->
                 <h2>Enter your username:</h2>
                 <input type="text" id="username-input">
                 <button id="start-button">Start Game</button>
-              </div>
-
-            <div id="question-container">
-                <h1 id="question-text">Question:</h1>   <!-- Where the questions are asked -->
-                <ul id="choices-list">                  <!-- Where the questions are answered -->
-                  <li class="choice">Option 1</li>
-                  <li class="choice">Option 2</li>
-                  <li class="choice">Option 3</li>
-                  <li class="choice">Option 4</li>
-                </ul>
+            </div>
+            
+            <div id="game-box">
+                <div id="question-container">
+                    <div class="question-box">
+                        <h1 id="question-text">Question:</h1>   <!-- Where the questions are asked -->
+                    </div>
+                    <div class="answers-box">
+                        <ul id="choices-list">                  <!-- Where the questions are answered -->
+                            <li class="choice">Option 1</li>
+                            <li class="choice">Option 2</li>
+                            <li class="choice">Option 3</li>
+                            <li class="choice">Option 4</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             
             <div id="score-container">                  <!-- current score -->
@@ -40,15 +42,22 @@
                 <h2>High Score</h2>
                 <p id="high-score">0</p>
             </div>
+
+          <div id="welcome-container">                <!-- Welcome section with animated logo -->
+                <i class="fa-regular fa-music fa-beat-fade"></i>
+              <h1> Midi Melody Mayhem Start Quiz</h1>
+            <button>Start Game</button>
+            </div>
+
             
-            <div id="leaderboard-container">            <!-- top 3 High score usernames -->
+            <!-- <div id="leaderboard-container">
                 <h2>Leaderboard</h2>
                 <ol id="leaderboard">
                   <li><span class="leaderboard-name">Player 1</span> - <span class="leaderboard-score">0</span></li>
                   <li><span class="leaderboard-name">Player 2</span> - <span class="leaderboard-score">0</span></li>
                   <li><span class="leaderboard-name">Player 3</span> - <span class="leaderboard-score">0</span></li>
                 </ol>
-            </div>
+            </div> -->
 
               <script src="https://kit.fontawesome.com/020d3091a7.js" crossorigin="anonymous"></script>
 
