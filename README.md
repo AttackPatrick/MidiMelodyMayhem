@@ -1,108 +1,146 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+1. Key project information
+    This project is a music triva game based off of MIDI replicas of well known songs which I call MIDI Melody Mayhem. It is a set of 10 questions (currently) that are about the song you hear playing.
+2.Table of content
+1. Key project information
+2. Table of content
+3. Features
+4. Testing
+5. Deployment
+6. Technologies and credits
 
-Welcome USER_NAME,
+3.1. Features used in HTML document
+We have welcome message div with a start button with the game waiting to be played underneath
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+3.2. Main HTML document
+Game Page
+File : index.html
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+3.3. Existing Features summary
+Once the start game button is pressed the welcome div will disappear from view and the MIDI file corresponding to the question will begin to play after a few moments. if the user wishes to stop the song they can press the pause button in the question container and they are able to click on an answer and the site will keep the users score until the end of the game.
 
-## Gitpod Reminders
+4. Testing
+4.1 Testing via Google Chrome Developer Tools
+Task : To test the project for responsiveness in Google Chrome Developer Tools, to ensure correct @media screen and (max-width: ... ) is enabled and all elements of the project are responding to changing view-port.
+Method : Project was displayed via Google Chrome browser, Developer tools were opened and view-port size changed to different sizes.
+Expected result : Project does response to three levels of view-port sizes.
+Actual result : Project is fully responsive in three levels, view-port width up to 1140px (mobile phone devices and tablets), view-port width 1141px - 1600px (laptops) and view-port width over 1600px (full HD devices). No content is distorted.
+Overall result : Pass
+Back to Table of content
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+4.2. Physical testing by developer
+Task : To physically test the final project responsiveness on different devices with different view-port.
+Method : Project was tested on following devices :
+IPhone 8 - mobile phone with small view-port
+Samsung Fold Z4 - mobile phone with large view-port
+FireHD 8 - tablet with small view-port
+Samsung Galaxy tab S6 - tablet with large view-port
+PC with resolution 1366px * 768px (HD)
+PC with resolution 1920px * 1080px (Full HD)
+Expected result : Project does response without distortion on all devices.
+Actual result : No content is distorted on any of the listed devices.
+Overall result : Pass
+Task : To physically test the final project functionality in different browsing applications.
+Method : Project was tested in following applications :
+Google Chrome
+Mozilla Firefox
+Microsoft Edge
+Opera
+Safari
+Expected result : Project does function in all web browsers.
+Actual result : No content is distorted in any of the listed browsers and project keeps functionality, all navigation links are working and form is responsive to empty fields.
+Overall result : Pass
+Task : To physically test navigation links for broken links including header and footer.
+Method : Navigate from index.html to all other pages one by one. Once this was done, tho process was repeated for *.html documents.
+Expected result : No broken links were expected.
+Actual result : All navigation links were working as expected, all page headings <title> ... </title> were also changing as expected.
+Overall result : Pass
+Task : To physically test form responsiveness.
+Method : Navigate to reserve.html. Try to submit form without filling all data or invalid data.
+Expected result : Form will not submit without filling <input ... required/> or without correct email address.
+Actual result : Form did submit with incorrect email address. This was fixed in commitment 5646f83. Form is now behaving as expected.
+Overall result : Pass
+Back to Table of content
 
-`python3 -m http.server`
+4.4. Lighthouse testing
+*.html documents were tested via Lighthouse with very good results (appendix 30). Suggestion was made on pages food.html and drink.html to use webp image format instead of current png format.
+Appendix 30 - Lighthouse testing - index.html
 
-A blue button should appear to click: _Make Public_,
+4.5. Validators testing
+Jigsaw CSS validator
+Method : Project (styles.css) was tested by W3C CSS Validator.
+Result : One error found while testing. This bug was fixed in commitment b0ce710. There are no further errors with CSS code (appendix 31).
+Appendix 31 - Jigsaw CSS Validator testing - styles.css
 
-Another blue button should appear to click: _Open Browser_.
+Appendix 31 - Jigsaw testing - styles.css
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+W3C HTML validator
+Method : Every HTML document was tested by W3C Validator.
+Result : Initial validating found 2 errors. First error with trailing slash in hidden checkbox. Second error with misplaced </a> and </i> tags. Both errors were fixed in commitments 67936bc and 9769460. There were no future errors found after two fixes.
 
-A blue button should appear to click: _Make Public_,
+4.6. Accessibility testing (WAVE Web Accessibility Evaluation Tools)
+Method : Every HTML document was tested by WAVE Web Accessibility Evaluation Tool.
 
-Another blue button should appear to click: _Open Browser_.
+Focus : This test focused on the following.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+Every page has a language declared in header for page readers
+WCAG Coding Practices are followed
+All forms have correct aria labels aria-label="..."
+All images have correct alt labels <alt="...">
+Heading levels are in correct order <h1> - <h2> - <h3>
+Correct contrast ratio - minimal contrast ratio 4.5:1
+Result : Automated testing found no errors, contrast errors or alerts (Appendix 44). Contrast ratio of this project is 8.59:1 (Appendix 45).
 
-To log into the Heroku toolbelt CLI:
+4.7. Bugs
+Fixed bugs
+Throughout testing, various bugs were discovered, especially with very low view-port sizes. They were all fixed, committed and documented via GitHub.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+Bug with gallery preview image size
+Fix : Fixed using flex-box.
+Bug with horizontal phone/tablet orientation gallery.html
+Fix : Adjusted padding and margins of gallery elements.
+Bug with gallery navigation bar
+Fix : Adjusted margins.
+Bug with horizontal phone/tablet orientation contact.html
+Fix : Adjusted size of half-box.
+Bug with <input ... type="email">field
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+5. Deployment
+5.1. Transfer of progress from IDE
+Task : To ensure regular commitments are done to avoid any data/progress loss.
+Method :
+commands git add [filename] was used to add specific file to staging area, alternatively command git add . was used to add all changed files to staging area
+command git commit -m "[commit description]" was used to add commitments into queue
+command git push was used to push all commitments to remote repository on GitHub
+Finding : CodeAnywhere IDE only holds up to 3 commitments in queue, regular git push needed to be used.
+Back to Table of content
 
-------
+5.2. Deployment to GitHub Pages
+Task : To ensure users are able to view live version of Cibo Fresco project.
+Method :
+initial setting in GitHub -> PP1-Cibo-Fresco -> Settings -> Pages needed to be performed. It did enable developer to choose what branch to deploy.
+all further deployments were done automatically after git push
+Finding : It takes approximately 2 minutes from git push command to live version being updated.
+Back to Table of content
 
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+5.3. Offline cloning
+Task : To use repository on local machine.
+Method :
+Navigate to GitHub and follow Code -> HTTPS -> Copy button . after those steps open your local coding enviroment and type git clone [copied link] .
+Finding : Git Windows application needs to be installed.
+6. Technologies & Credits
+6.1. Technologies used to develop and deploy this project
+Balsamiq - to create wireframes.
+HTML - main programming language for this project
+CSS - styling the project via external CSS file /asssets/css/styles.css
+CodeAnywhere - to write and save the code
+GitBash - to make commitments of progress and push the results back to GitHub
+ConText - code off-line in "doodle-zone" mode
+GitHub - to record all commitments and deployment the live project
+6.2. Credits
+FontAwesome - to find and use icons
+TinyPNG - to compress images
+FavIcon.io - to find and compress favicon
+StackEdit - used to preview and write portions of readme.MD file
+PicJumbo - images database
+code-boxx.com - help with hamburger menu
+W3School - useful information and cheat sheets

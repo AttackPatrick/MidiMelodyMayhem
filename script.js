@@ -2,6 +2,10 @@ const startButton = document.getElementById('start-button');
 const welcomeContainer = document.getElementById('welcome-container');
 const questionTextH1 = document.getElementById('question-text');
 const answerButtons = document.getElementsByClassName('choice');
+const pauseBtn = document.getElementById('pauseBtn')
+const scoreTag = document.getElementById('score');
+const endScreen = document.getElementById('end-container');
+const endScore = document.getElementById('endScore');
 
 
 const questions = [
@@ -65,7 +69,7 @@ const questions = [
   /* Gangstas Paradise*/
 
   {
-    question: 'Which Michelle Pfieffer film was this song famous for being in?',
+    question: 'Which Michelle Pfeiffer film was this song famous for being in?',
     options: [
       'Dangerous Minds',
       'Boyz n the Hood',
@@ -145,7 +149,14 @@ const questions = [
 ]
 
 let questionNum = 0;
+let score = 0;
 
+
+function endQuiz() {
+  endScreen.style.display = 'flex';
+  endScore.innerText = 'Your score is ' + score + ' out of ' + questions.length
+  
+}
 
 function updateQuestion() {
   // e.g questions[0]
@@ -157,22 +168,39 @@ function updateQuestion() {
     answerButtons[i].innerText = currentQuestion.options[i]
   }
 
-  startButton.addEventListener('click', () => {
+  scoreTag.innerText = 'score: '+ score;
 
-    welcomeContainer.style.display = 'none';
-    updateQuestion()
+
+  MIDIjs.play(currentQuestion.song);
+  
+}
+
+startButton.addEventListener('click', (function() {
+
+  welcomeContainer.style.display = 'none';
+  updateQuestion()
+})
+
+
+for (let i = 0; i <= 3; i++) {
+  answerButtons[i].addEventListener('click', function(e) {
+    if (i == questions[questionNum].correctAnswer) {
+      alert('Correct!')
+      score += 1
+    } else {
+      alert('Wrong!')
+    }
+    questionNum += 1
+
+    if (questionNum <= 9) {
+    updateQuestion();
+    } else {
+      endQuiz()
+    }
   })
-  
-  
-  for (let i = 0; i <= 3; i++) {
-    answerButtons[i].addEventListener('click', function(e) {
-      if (i == questions[questionNum].correctAnswer) {
-        alert('Correct!')
-      } else {
-        alert('Wrong!')
-      }
-      questionNum += 1
-  
-      updateQuestion();
-    })
-  }
+}
+
+
+pauseBtn.addEventListener('click', function() {
+  MIDIjs.stop()
+})

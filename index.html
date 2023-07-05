@@ -2,6 +2,7 @@
     <html lang="en">
         <head>
             <title>MIDI Melody Mayhem</title>
+            <link rel="stylesheet" type="text/css" href="css/styles.css">
             <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -19,8 +20,16 @@
 
   <div id="welcome-container">
     <!-- Welcome section with animated logo -->
-    <h1> Midi Melody Mayhem Start Quiz</h1>
+    <h1> Midi Melody Mayhem!!!</h1>
+    <h2> Answers questions based on the song you are hearing in MIDI format</h2>
     <button id="start-button">Start Game</button>
+    <p>Please wait for the songs to play</p>
+  </div>
+
+  <div id="end-container">
+    <!-- Welcome section with animated logo -->
+    <h1> Thank you for playing!!!</h1>
+    <h2 id="endScore"></h2>
   </div>
 
   <!-- Where the questions are asked -->
@@ -29,6 +38,7 @@
 
     <div class="question-box">
       <h1 id="question-text">Question:</h1>
+      <img id="pauseBtn" src="./pause.svg" alt="pauseBtn">
     </div>
 
     <!-- Where the questions are answered -->
