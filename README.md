@@ -20,50 +20,14 @@ Once the start game button is pressed the welcome div will disappear from view a
 
 4. Testing
 4.1 Testing via Google Chrome Developer Tools
-Task : To test the project for responsiveness in Google Chrome Developer Tools, to ensure correct @media screen and (max-width: ... ) is enabled and all elements of the project are responding to changing view-port.
-Method : Project was displayed via Google Chrome browser, Developer tools were opened and view-port size changed to different sizes.
-Expected result : Project does response to three levels of view-port sizes.
-Actual result : Project is fully responsive in three levels, view-port width up to 1140px (mobile phone devices and tablets), view-port width 1141px - 1600px (laptops) and view-port width over 1600px (full HD devices). No content is distorted.
-Overall result : Pass
-Back to Table of content
+tested the game on several devices and they all worked well. I could have made the mobile welcome screen better for widths 300 pixels and under but i didn't leave myself enough time to fix it.
 
-4.2. Physical testing by developer
-Task : To physically test the final project responsiveness on different devices with different view-port.
-Method : Project was tested on following devices :
-IPhone 8 - mobile phone with small view-port
-Samsung Fold Z4 - mobile phone with large view-port
-FireHD 8 - tablet with small view-port
-Samsung Galaxy tab S6 - tablet with large view-port
-PC with resolution 1366px * 768px (HD)
-PC with resolution 1920px * 1080px (Full HD)
-Expected result : Project does response without distortion on all devices.
-Actual result : No content is distorted on any of the listed devices.
-Overall result : Pass
-Task : To physically test the final project functionality in different browsing applications.
-Method : Project was tested in following applications :
-Google Chrome
-Mozilla Firefox
-Microsoft Edge
-Opera
-Safari
-Expected result : Project does function in all web browsers.
-Actual result : No content is distorted in any of the listed browsers and project keeps functionality, all navigation links are working and form is responsive to empty fields.
-Overall result : Pass
-Task : To physically test navigation links for broken links including header and footer.
-Method : Navigate from index.html to all other pages one by one. Once this was done, tho process was repeated for *.html documents.
-Expected result : No broken links were expected.
-Actual result : All navigation links were working as expected, all page headings <title> ... </title> were also changing as expected.
-Overall result : Pass
-Task : To physically test form responsiveness.
-Method : Navigate to reserve.html. Try to submit form without filling all data or invalid data.
-Expected result : Form will not submit without filling <input ... required/> or without correct email address.
-Actual result : Form did submit with incorrect email address. This was fixed in commitment 5646f83. Form is now behaving as expected.
-Overall result : Pass
-Back to Table of content
 
 4.4. Lighthouse testing
-*.html documents were tested via Lighthouse with very good results (appendix 30). Suggestion was made on pages food.html and drink.html to use webp image format instead of current png format.
-Appendix 30 - Lighthouse testing - index.html
+*.html documents were tested via Lighthouse with very good results. 
+Lighthouse testing - index.html
+/workspaces/MidiMelodyMayhem/assets/images/lighthouse performance.png
+
 
 4.5. Validators testing
 Jigsaw CSS validator

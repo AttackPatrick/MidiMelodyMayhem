@@ -42,7 +42,7 @@ body {
   }
   
   .choice:hover {
-    transform: scale(105%)
+    transform: scale(1.05)
   }
   
   /* Container Styles */
@@ -76,7 +76,7 @@ body {
   }
   
   #start-button:hover {
-    transform: scale(105%)
+    transform: scale(1.05)
   }
   
   
@@ -153,7 +153,7 @@ body {
   }
   
   #pauseBtn:hover {
-    transform: scale(110%)
+    transform: scale(1.1)
   }
   
   
