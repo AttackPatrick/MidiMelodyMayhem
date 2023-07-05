@@ -179,7 +179,7 @@ startButton.addEventListener('click', (function() {
 
   welcomeContainer.style.display = 'none';
   updateQuestion()
-})
+}))
 
 
 for (let i = 0; i <= 3; i++) {
