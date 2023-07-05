@@ -4,74 +4,62 @@
             <title>MIDI Melody Mayhem</title>
             <link rel="stylesheet" type="text/css" href="css/styles.css">
             <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@1,700&family=Prompt:wght@300&family=Quattrocento+Sans&display=swap"
-    rel="stylesheet">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  <title>MIDI Melody Mayhem</title>
-</head>
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link
+                href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@1,700&family=Prompt:wght@300&family=Quattrocento+Sans&display=swap"
+                rel="stylesheet">
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+            <title>MIDI Melody Mayhem</title>
+        </head>
 
-<body>
-
-
-
-  <div id="welcome-container">
-    <!-- Welcome section with animated logo -->
-    <h1> Midi Melody Mayhem!!</h1>
-    <h2> Answer questions based on the song you are hearing in MIDI format</h2>
-    <button id="start-button">Start Game</button>
-    <p>Please wait for the songs to play</p>
-  </div>
-
-  <div id="end-container">
-    <!-- Welcome section with animated logo -->
-    <h1> Thank you for playing!!!</h1>
-    <h2 id="endScore"></h2>
-  </div>
-
-  <!-- Where the questions are asked -->
-
-  <div id="game-box">
-
-    <div class="question-box">
-      <h1 id="question-text">Question:</h1>
-      <img id="pauseBtn" src="./pause.svg" alt="pauseBtn">
-    </div>
-
-    <!-- Where the questions are answered -->
+        <body>
 
 
-    <div class="answers-box">
-      <ul id="choices-list">
-        <li><button class="choice">Option 1</button></li>
-        <li><button class="choice">Option 2</button></li>
-        <li><button class="choice">Option 3</button></li>
-        <li><button class="choice">Option 4</button></li>
-      </ul>
-    </div>
 
-    <p id="score">Score: 0</p>
+        <div id="welcome-container">
+        <!-- Welcome section with animated logo -->
+            <h1> Midi Melody Mayhem!!</h1>
+            <h2> Answer questions based on the song you are hearing in MIDI format</h2>
+            <button id="start-button">Start Game</button>
+            <p>Please wait for the songs to play</p>
+        </div>
 
-  </div>
+        <div id="end-container">
+        <!-- Welcome section with animated logo -->
+            <h1> Thank you for playing!!!</h1>
+            <h2 id="endScore"></h2>
+        </div>
+
+        <!-- Where the questions are asked -->
+
+        <div id="game-box">
+
+        <div class="question-box">
+            <h1 id="question-text">Question:</h1>
+            <img id="pauseBtn" src="./pause.svg" alt="pauseBtn">
+        </div>
+
+        <!-- Where the questions are answered -->
 
 
-  <!-- <div id="leaderboard-container">
-                <h2>Leaderboard</h2>
-                <ol id="leaderboard">
-                  <li><span class="leaderboard-name">Player 1</span> - <span class="leaderboard-score">0</span></li>
-                  <li><span class="leaderboard-name">Player 2</span> - <span class="leaderboard-score">0</span></li>
-                  <li><span class="leaderboard-name">Player 3</span> - <span class="leaderboard-score">0</span></li>
-                </ol>
-            </div> -->
+        <div class="answers-box">
+            <ul id="choices-list">
+                <li><button class="choice">Option 1</button></li>
+                <li><button class="choice">Option 2</button></li>
+                <li><button class="choice">Option 3</button></li>
+                <li><button class="choice">Option 4</button></li>
+            </ul>
+        </div>
 
-  <!-- <script src="https://kit.fontawesome.com/020d3091a7.js" crossorigin="anonymous">
-              </script> -->
-  <script src='http://www.midijs.net/lib/midi.js'></script>
-  <script src="./script.js"></script>
+        <p id="score">Score: 0</p>
 
-</body>
+        </div>
+
+        <script src='http://www.midijs.net/lib/midi.js'></script>
+        <script src="./script.js"></script>
+
+    </body>
 
 </html>
